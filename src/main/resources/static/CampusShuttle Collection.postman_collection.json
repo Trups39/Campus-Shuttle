@@ -1,0 +1,449 @@
+{
+	"info": {
+		"_postman_id": "b16f7db9-df27-4886-ac14-5dc5c2c6eb8b",
+		"name": "CampusShuttle Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24402067"
+	},
+	"item": [
+		{
+			"name": "Locations",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/locations/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/locations/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"latitude\": 0.00,\r\n    \"longitude\": 0.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/locations/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"longitude\": 1.0,\r\n    \"latitude\": 1.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/locations/3"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/locations/3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Address",
+			"item": [
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"address\": \"Bird Library, Syracuse\",\r\n    \"location\":{\r\n        \"latitude\": 43.0398955,\r\n        \"longitude\": -76.1326052\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/addresses/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/addresses/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/addresses/3"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"address\": \"College Pl., Syracuse\",\r\n    \"location\": {\r\n        \"locationId\": 2,\r\n        \"longitude\": -76.135844,\r\n        \"latitude\": 43.035979\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/addresses/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/addresses/2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/users/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/users/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Get by suid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/users/suid/369790341"
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"suid\": \"369790342\",\r\n    \"name\": \"Jay Bipin Ganatra\",\r\n    \"email\": \"jganatra1@syr.edu\",\r\n    \"address\": {\r\n        \"address\": \"701 Maryland Ave, Syracuse\",\r\n        \"location\": {\r\n            \"latitude\": \"43.0383698\",\r\n            \"longitude\": \"-76.1201811\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/users/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"suid\": 369790342,\r\n    \"name\": \"Jay Ganatra 2\",\r\n    \"email\": \"jganatra2@syr.edu\",\r\n    \"address\": {\r\n        \"addressId\": 11,\r\n        \"address\": \"544 Clarendon St, Syracuse\",\r\n        \"location\": {\r\n            \"locationId\": 12,\r\n            \"longitude\": -77.0,\r\n            \"latitude\": 44.0\r\n        }\r\n    },\r\n    \"status\": \"INACTIVE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/users/3"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/users/2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BusStop",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/bus-stops/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/bus-stops/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"address\": {\r\n        \"address\": \"College Place, Syracuse\",\r\n        \"location\": {\r\n            \"latitude\": 1,\r\n            \"longitude\": 1\r\n        }\r\n    },\r\n    \"studentsWaiting\": 0,\r\n    \"defaultShuttle\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/bus-stops/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"studentsWaiting\":5,\r\n    \"defaultShuttle\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/bus-stops/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/bus-stops/3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Shuttle",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/shuttles/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/shuttles/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"registrationNumber\": \"HRB386\",\r\n        \"capacity\": 3,\r\n        \"requestCount\": 0,\r\n        \"currentCount\": 0,\r\n        \"waitTime\": 0,\r\n        \"currentLocation\": {\r\n            \"longitude\": 1.0,\r\n            \"latitude\": 1.0\r\n        },\r\n        \"shuttleStatus\": \"REST\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/shuttles/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"registrationNumber\": \"HRB386\",\r\n        \"capacity\": 3,\r\n        \"requestCount\": 1,\r\n        \"currentCount\": 0,\r\n        \"waitTime\": 0,\r\n        \"currentLocation\": {\r\n            \"longitude\": 1,\r\n            \"latitude\": 1\r\n        },\r\n        \"shuttleStatus\": \"REST\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/shuttles/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/shuttles/2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Business Logic",
+			"item": [
+				{
+					"name": "Request Pickup",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/shuttles/requestPickup?suid=369790341",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"shuttles",
+								"requestPickup"
+							],
+							"query": [
+								{
+									"key": "suid",
+									"value": "369790341"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Passenger",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/shuttles/addPassenger?suid=369790347",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"shuttles",
+								"addPassenger"
+							],
+							"query": [
+								{
+									"key": "suid",
+									"value": "369790347"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateLocation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/shuttles/shuttleLocation?latitude=0&longitude=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"shuttles",
+								"shuttleLocation"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "0"
+								},
+								{
+									"key": "longitude",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
